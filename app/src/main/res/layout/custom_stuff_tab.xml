@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.app.smeezy.views.CustomFontTextView
+        android:id="@+id/tab_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dimen_10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_15sp"
+        android:gravity="center"
+        app:typeface="Gentona_Book.otf" />
+
+</LinearLayout>

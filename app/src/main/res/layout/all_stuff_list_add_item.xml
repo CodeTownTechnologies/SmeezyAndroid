@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_all_stuff_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dimen_10dp"
+    android:paddingLeft="@dimen/dimen_10dp"
+    android:paddingRight="@dimen/dimen_10dp"
+    android:paddingTop="@dimen/dimen_10dp">
+
+    <com.app.smeezy.views.CustomFontButton
+        android:id="@+id/btn_add_stuff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:text="@string/add_item_manually"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_17sp"
+        app:typeface="Gentona_Book.otf" />
+
+    <com.app.smeezy.views.CustomFontTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:gravity="center_vertical"
+        android:text="@string/or"
+        android:textStyle="bold"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/txt_20sp"
+        app:typeface="Gentona_Book.otf" />
+
+
+</LinearLayout>

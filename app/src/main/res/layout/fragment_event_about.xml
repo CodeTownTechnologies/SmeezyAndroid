@@ -1,0 +1,97 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:overScrollMode="never"
+    tools:context="com.app.smeezy.fragment.EventAboutFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dimen_20dp"
+        android:paddingRight="@dimen/dimen_20dp">
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:text="@string/time"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_17sp"
+            android:textStyle="bold"
+            app:typeface="Gentona_Book.otf" />
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:id="@+id/tv_event_detail_date_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/txt_17sp"
+            app:typeface="Gentona_Light.otf" />
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:text="@string/location"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_17sp"
+            android:textStyle="bold"
+            app:typeface="Gentona_Book.otf" />
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:id="@+id/tv_event_detail_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/txt_17sp"
+            app:typeface="Gentona_Light.otf" />
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:text="@string/event_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_17sp"
+            android:textStyle="bold"
+            app:typeface="Gentona_Book.otf" />
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:id="@+id/tv_event_detail_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/txt_17sp"
+            app:typeface="Gentona_Light.otf" />
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:text="@string/event_description"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_17sp"
+            android:textStyle="bold"
+            app:typeface="Gentona_Book.otf" />
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:id="@+id/tv_event_detail_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/txt_17sp"
+            app:typeface="Gentona_Light.otf" />
+
+    </LinearLayout>
+
+</ScrollView>

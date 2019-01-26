@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.app.smeezy.activity.InviteActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:id="@+id/ll_report_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <com.app.smeezy.views.CustomFontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:text="@string/to_smeezy"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_17sp"
+                app:typeface="Gentona_Book.otf" />
+
+            <com.app.smeezy.views.CustomFontEdittext
+                android:id="@+id/et_invite_friend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:background="@drawable/edittext_box"
+                android:gravity="top"
+                android:maxHeight="@dimen/dimen_160dp"
+                android:longClickable="false"
+                android:focusableInTouchMode="false"
+                android:textColor="@color/black"
+                android:inputType="textMultiLine"
+                android:minHeight="@dimen/dimen_30dp"
+                android:padding="@dimen/dimen_10dp"
+                android:scrollbars="vertical" />
+
+            <com.app.smeezy.views.CustomFontTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:text="@string/message"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_17sp"
+                app:typeface="Gentona_Book.otf" />
+
+            <com.app.smeezy.views.CustomFontEdittext
+                android:id="@+id/et_invite_desc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_200dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@drawable/edittext_box"
+                android:gravity="top"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/dimen_10dp"
+                android:scrollbars="vertical" />
+
+            <com.app.smeezy.views.CustomFontButton
+                android:id="@+id/btn_invite_send"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/dimen_40dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:background="@drawable/button_background"
+                android:text="@string/send_invite"
+                android:layout_gravity="center_horizontal"
+                android:textAllCaps="true"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_17sp"
+                app:typeface="Gentona_Medium.otf" />
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_40dp"
+                android:orientation="horizontal">
+
+                <com.app.smeezy.views.CustomFontButton
+                    android:id="@+id/btn_invite_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:text="@string/cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_17sp"
+                    app:typeface="Gentona_Medium.otf" />
+
+                <com.app.smeezy.views.CustomFontButton
+                    android:id="@+id/btn_invite_send"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:text="@string/send_invite"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_17sp"
+                    app:typeface="Gentona_Medium.otf" />
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

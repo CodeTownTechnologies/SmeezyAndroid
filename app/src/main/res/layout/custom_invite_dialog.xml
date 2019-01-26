@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginLeft="@dimen/dimen_20dp"
+    android:layout_marginRight="@dimen/dimen_20dp"
+    android:background="@drawable/edittext_box"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <com.app.smeezy.views.CustomFontTextView
+        android:id="@+id/txt_title_video_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:gravity="center"
+        android:text="@string/select_friends_to_invite"
+        android:textColor="@color/black"
+        android:textSize="@dimen/txt_20sp"
+        app:typeface="Gentona_Book.otf" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/invite_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:maxHeight="@dimen/dimen_300dp"
+        android:overScrollMode="never" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp">
+
+        <com.app.smeezy.views.CustomFontButton
+            android:id="@+id/btn_invite_cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_17sp"
+            app:typeface="Gentona_Light.otf" />
+
+        <com.app.smeezy.views.CustomFontButton
+            android:id="@+id/btn_invite_ok"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_17sp"
+            app:typeface="Gentona_Light.otf" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

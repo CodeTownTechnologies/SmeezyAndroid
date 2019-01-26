@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.app.smeezy.fragment.TradeFeedFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:layout_height="wrap_content">
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:id="@+id/tv_trade_set_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/location_red"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:text="@string/set_search_distance"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/txt_15sp"
+            app:typeface="Gentona_Light.otf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:layout_height="wrap_content">
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:id="@+id/tv_trade_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/filter"
+            android:drawablePadding="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:text="@string/filter"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/txt_15sp"
+            app:typeface="Gentona_Light.otf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:layout_height="wrap_content">
+
+            <com.app.smeezy.views.CustomFontTextView
+                android:id="@+id/tv_trade_order_by"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/sort"
+                android:drawablePadding="@dimen/dimen_10dp"
+                android:gravity="center"
+                android:text="@string/order_by"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_15sp"
+                app:typeface="Gentona_Light.otf" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/trade_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+
+    <com.app.smeezy.views.CustomFontTextView
+        android:id="@+id/tv_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_posts_yet"
+        android:visibility="gone"
+        app:typeface="Gentona_Light.otf" />
+
+
+</LinearLayout>

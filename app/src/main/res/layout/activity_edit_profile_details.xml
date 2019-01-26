@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.app.smeezy.activity.EditProfileDetailsActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_30dp"
+            android:layout_marginRight="@dimen/dimen_30dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <com.app.smeezy.views.CustomFontEdittext
+                android:id="@+id/et_edit_profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginTop="@dimen/dimen_30dp"
+                android:background="@color/transparent"
+                android:focusableInTouchMode="false"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:longClickable="false"
+                android:textColor="@color/hint_color"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/txt_15sp"
+                app:typeface="Gentona_Light.otf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/hint_color" />
+
+            <com.app.smeezy.views.CustomFontEdittext
+                android:id="@+id/et_edit_profile_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@color/transparent"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/txt_15sp"
+                app:typeface="Gentona_Light.otf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/hint_color" />
+
+            <com.app.smeezy.views.CustomFontEdittext
+                android:id="@+id/et_edit_profile_dob"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@color/transparent"
+                android:focusableInTouchMode="false"
+                android:hint="@string/date_of_birth"
+                android:inputType="date"
+                android:longClickable="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/txt_15sp"
+                app:typeface="Gentona_Light.otf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/hint_color" />
+
+            <com.app.smeezy.views.CustomFontEdittext
+                android:id="@+id/et_edit_profile_relationship_status"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@color/transparent"
+                android:hint="@string/relationship_status"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/txt_15sp"
+                app:typeface="Gentona_Light.otf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/hint_color" />
+
+            <com.app.smeezy.views.CustomFontEdittext
+                android:id="@+id/et_edit_profile_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@color/transparent"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/txt_15sp"
+                app:typeface="Gentona_Light.otf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/hint_color" />
+
+            <com.app.smeezy.views.CustomFontEdittext
+                android:id="@+id/et_edit_profile_location"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@color/transparent"
+                android:focusableInTouchMode="false"
+                android:hint="@string/location"
+                android:inputType="text"
+                android:longClickable="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/txt_15sp"
+                app:typeface="Gentona_Light.otf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/hint_color" />
+
+            <com.app.smeezy.views.CustomFontEdittext
+                android:id="@+id/et_edit_profile_gender"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:background="@color/transparent"
+                android:hint="@string/gender"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/txt_15sp"
+                app:typeface="Gentona_Light.otf" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:background="@color/hint_color" />
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.app.smeezy.views.CustomFontTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_5dp"
+                    android:layout_weight="1"
+                    android:text="@string/gender"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp"
+                    app:typeface="Gentona_Book.otf" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <RadioGroup
+                        android:id="@+id/rg_edit_profile_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <RadioButton
+                            android:id="@+id/rb_edit_profile_male"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@drawable/selector_radio_blue"
+                            android:checked="true"
+                            android:paddingLeft="@dimen/dimen_5dp"
+                            android:text="@string/male"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/green"
+                            android:textSize="@dimen/txt_15sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_edit_profile_female"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@drawable/selector_radio_blue"
+                            android:paddingLeft="@dimen/dimen_5dp"
+                            android:text="@string/female"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/green"
+                            android:textSize="@dimen/txt_15sp" />
+
+                        <RadioButton
+                            android:id="@+id/rb_edit_profile_other"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@drawable/selector_radio_blue"
+                            android:paddingLeft="@dimen/dimen_5dp"
+                            android:text="@string/other"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/green"
+                            android:textSize="@dimen/txt_15sp" />
+
+                    </RadioGroup>
+
+                    <com.app.smeezy.views.CustomFontEdittext
+                        android:id="@+id/et_edit_profile_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@drawable/edittext_box"
+                        android:hint="@string/gender"
+                        android:inputType="text"
+                        android:visibility="gone"
+                        android:paddingLeft="@dimen/dimen_5dp"
+                        android:paddingRight="@dimen/dimen_5dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/txt_15sp"
+                        app:typeface="Gentona_Light.otf" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>-->
+
+            <com.app.smeezy.views.CustomFontButton
+                android:id="@+id/btn_edit_profile_update"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/dimen_40dp"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:background="@drawable/button_background"
+                android:text="@string/update"
+                android:textAllCaps="true"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_17sp"
+                app:typeface="Gentona_Medium.otf" />
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_40dp"
+                android:orientation="horizontal">
+
+                <com.app.smeezy.views.CustomFontButton
+                    android:id="@+id/btn_edit_profile_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:layout_marginRight="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:text="@string/cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_17sp"
+                    app:typeface="Gentona_Medium.otf" />
+
+                <com.app.smeezy.views.CustomFontButton
+                    android:id="@+id/btn_edit_profile_update"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_40dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_background"
+                    android:text="@string/update"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/txt_17sp"
+                    app:typeface="Gentona_Medium.otf" />
+
+            </LinearLayout>-->
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
+

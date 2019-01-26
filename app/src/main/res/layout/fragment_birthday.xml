@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.app.smeezy.fragment.BirthdayFragment">
+
+    <com.app.smeezy.views.CustomFontEdittext
+        android:id="@+id/et_birthday_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:background="@drawable/search_box"
+        android:hint="@string/search"
+        android:minHeight="@dimen/dimen_30dp"
+        android:padding="@dimen/dimen_5dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_color"
+        android:textSize="@dimen/txt_15sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/birthday_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_birthday_search"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:overScrollMode="never" />
+
+    <com.app.smeezy.views.CustomFontTextView
+        android:id="@+id/tv_empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_friends"
+        android:visibility="gone"
+        app:typeface="Gentona_Light.otf" />
+
+</RelativeLayout>

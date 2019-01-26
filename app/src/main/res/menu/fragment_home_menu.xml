@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item android:id="@+id/home_search"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/search_icon"
+        android:title="@string/search"/>
+
+    <item android:id="@+id/friend_request"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/notification"
+        android:title="@string/friend_requests"/>
+
+    <!--<item android:id="@+id/home_filter"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/right_menu"
+        android:title="@string/filter"/>-->
+
+</menu>

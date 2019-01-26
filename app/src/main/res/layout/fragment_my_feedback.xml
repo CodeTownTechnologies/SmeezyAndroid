@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.app.smeezy.fragment.MyFeedbackFragment">
+
+    <com.app.smeezy.views.CustomFontButton
+        android:id="@+id/btn_post_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:paddingLeft="@dimen/dimen_20dp"
+        android:paddingRight="@dimen/dimen_20dp"
+        android:background="@drawable/button_background"
+        android:text="@string/be_the_first_to_give_feedback"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_17sp"
+        app:typeface="Gentona_Book.otf" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_feedback_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_post_feedback"
+        android:overScrollMode="never" />
+
+    <com.app.smeezy.views.CustomFontTextView
+        android:id="@+id/my_feedback_empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:visibility="gone"
+        app:typeface="Gentona_Light.otf" />
+
+
+</RelativeLayout>

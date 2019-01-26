@@ -1,0 +1,43 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.app.smeezy.fragment.GroupTimelineFragment">
+
+    <com.app.smeezy.views.CustomFontEdittext
+        android:id="@+id/et_group_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:background="@color/transparent"
+        android:focusableInTouchMode="false"
+        android:longClickable="false"
+        android:hint="@string/post_to_group"
+        android:textColor="@color/black"
+        android:textColorHint="@color/popup_title_color"
+        android:textSize="@dimen/txt_18sp"
+        app:typeface="Gentona_Light.otf" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_share_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+
+    <com.app.smeezy.views.CustomFontTextView
+        android:id="@+id/tv_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/no_posts_yet"
+        android:visibility="gone"
+        app:typeface="Gentona_Light.otf" />
+
+
+</LinearLayout>

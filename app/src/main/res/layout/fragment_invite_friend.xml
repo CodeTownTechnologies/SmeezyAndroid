@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true"
+    tools:context="com.app.smeezy.fragment.InviteFriendFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_invite_friend_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/invite_friends_to_join_smeezy"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/txt_20sp"
+            app:typeface="Gentona_Book.otf" />
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_40dp"
+            android:text="@string/share_your_referral_code"
+            android:textColor="@color/light_black"
+            android:textSize="@dimen/txt_15sp"
+            app:typeface="Gentona_Light.otf" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:gravity="center">
+
+            <com.app.smeezy.views.CustomFontTextView
+                android:id="@+id/tv_invite_friend_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txt_31sp"
+                app:typeface="Gentona_Medium.otf" />
+
+
+            <ImageView
+                android:id="@+id/img_invite_friend_copy_code"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:src="@drawable/copy" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

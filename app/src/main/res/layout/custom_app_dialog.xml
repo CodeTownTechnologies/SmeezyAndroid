@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_10dp"
+        android:background="@drawable/white_bckg_rect"
+        android:orientation="vertical">
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_10dp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_18sp" />
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:id="@+id/txt_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen_20dp"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/beige1" />
+
+        <LinearLayout
+            android:id="@+id/lin_action"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/beige_bckg_rect"
+            android:orientation="horizontal">
+
+            <com.app.smeezy.views.CustomFontTextView
+                android:id="@+id/txt_action1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/left_white_bckg_rect"
+                android:gravity="center"
+                android:padding="@dimen/dimen_10dp"
+                android:text="action1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_15sp" />
+
+            <com.app.smeezy.views.CustomFontTextView
+                android:id="@+id/txt_action2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0.5dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/right_white_bckg_rect"
+                android:gravity="center"
+                android:padding="@dimen/dimen_10dp"
+                android:text="action2"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_15sp" />
+
+            <com.app.smeezy.views.CustomFontTextView
+                android:id="@+id/txt_action3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottom_white_bckg_rect"
+                android:gravity="center"
+                android:padding="@dimen/dimen_10dp"
+                android:text="action3"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/txt_15sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

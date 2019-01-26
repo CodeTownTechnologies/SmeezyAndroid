@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.app.smeezy.activity.PostActivity">
+
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_post_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_post_user"
+                    android:layout_width="@dimen/dimen_50dp"
+                    android:layout_height="@dimen/dimen_50dp"
+                    android:src="@drawable/profile_img" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/dimen_50dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.app.smeezy.views.CustomFontTextView
+                        android:id="@+id/tv_post_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ronald Hayes"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_17sp"
+                        app:typeface="Gentona_Book.otf" />
+
+                    <com.app.smeezy.views.CustomFontTextView
+                        android:id="@+id/tv_post_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dec 20, at 8:35pm"
+                        android:textColor="@color/hint_color"
+                        android:textSize="@dimen/txt_15sp"
+                        app:typeface="Gentona_Light.otf" />
+
+                </LinearLayout>
+
+                <!--<ImageView
+                    android:id="@+id/img_post_more"
+                    android:layout_width="@dimen/dimen_30dp"
+                    android:layout_height="@dimen/dimen_5dp"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:src="@drawable/more_icon" />-->
+
+            </LinearLayout>
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tv_post_image"
+                android:layout_below="@+id/ll_post_top"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.app.smeezy.views.CustomFontEdittext
+                        android:id="@+id/et_post_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dimen_20dp"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:layout_marginRight="@dimen/dimen_20dp"
+                        android:layout_marginTop="@dimen/dimen_30dp"
+                        android:background="@color/transparent"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/txt_17sp"
+                        app:typeface="Gentona_Light.otf" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/post_img_recycler_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:layout_marginRight="@dimen/dimen_20dp"
+                            android:divider="@null"
+                            android:overScrollMode="never"
+                            android:visibility="gone" />
+
+
+                        <com.afollestad.easyvideoplayer.EasyVideoPlayer
+                            android:id="@+id/vid_post"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_300dp"
+                            android:layout_marginBottom="@dimen/dimen_10dp"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:layout_marginRight="@dimen/dimen_20dp"
+                            android:visibility="gone" />
+
+                        <RelativeLayout
+                            android:id="@+id/rel_post_video_link"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_200dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/img_post_video_link"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_200dp"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:layout_marginRight="@dimen/dimen_20dp"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/img_post_video_link_play"
+                                android:layout_width="@dimen/dimen_75dp"
+                                android:layout_height="@dimen/dimen_75dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/play_icon" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_post_link"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_20dp"
+                            android:layout_marginRight="@dimen/dimen_20dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:background="@drawable/link_box"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dimen_5dp"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/img_post_link"
+                                android:layout_width="@dimen/dimen_75dp"
+                                android:layout_height="@dimen/dimen_75dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dimen_75dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:orientation="vertical">
+
+                                <com.app.smeezy.views.CustomFontTextView
+                                    android:id="@+id/tv_post_link_url_desc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:textColor="@color/light_black"
+                                    android:textSize="@dimen/txt_15sp"
+                                    app:typeface="Gentona_Book.otf" />
+
+                                <com.app.smeezy.views.CustomFontTextView
+                                    android:id="@+id/tv_post_link_url"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dimen_5dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:textColor="@color/hint_color"
+                                    android:textSize="@dimen/txt_13sp"
+                                    app:typeface="Gentona_Light.otf" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+            <com.app.smeezy.views.CustomFontTextView
+                android:id="@+id/tv_post_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/view_video"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/camera_icon_post"
+                android:drawablePadding="@dimen/dimen_20dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/dimen_15dp"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:paddingRight="@dimen/dimen_20dp"
+                android:paddingTop="@dimen/dimen_15dp"
+                android:text="@string/image"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/txt_20sp"
+                app:typeface="Gentona_Book.otf" />
+
+            <View
+                android:id="@+id/view_video"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_above="@+id/tv_post_video"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:background="@drawable/devider_line" />
+
+            <com.app.smeezy.views.CustomFontTextView
+                android:id="@+id/tv_post_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/view_link"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/video_icon"
+                android:drawablePadding="@dimen/dimen_20dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/dimen_15dp"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:paddingRight="@dimen/dimen_20dp"
+                android:paddingTop="@dimen/dimen_15dp"
+                android:text="@string/video"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/txt_20sp"
+                app:typeface="Gentona_Book.otf" />
+
+            <View
+                android:id="@+id/view_link"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_above="@+id/tv_post_link"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:background="@drawable/devider_line" />
+
+            <com.app.smeezy.views.CustomFontTextView
+                android:id="@+id/tv_post_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/link_icon"
+                android:drawablePadding="@dimen/dimen_20dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/dimen_15dp"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:paddingRight="@dimen/dimen_20dp"
+                android:paddingTop="@dimen/dimen_15dp"
+                android:text="@string/link"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/txt_20sp"
+                app:typeface="Gentona_Book.otf" />
+
+            <!--<View
+                android:id="@+id/view_news"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_above="@+id/tv_post_news"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                android:background="@drawable/devider_line" />
+
+
+            <com.app.smeezy.views.CustomFontTextView
+                android:id="@+id/tv_post_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:drawableLeft="@drawable/news_icon"
+                android:drawablePadding="@dimen/dimen_20dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/dimen_15dp"
+                android:paddingLeft="@dimen/dimen_20dp"
+                android:paddingRight="@dimen/dimen_20dp"
+                android:paddingTop="@dimen/dimen_15dp"
+                android:text="@string/news"
+                android:textColor="@color/light_black"
+                android:textSize="@dimen/txt_20sp"
+                app:typeface="Gentona_Book.otf" />
+        -->
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

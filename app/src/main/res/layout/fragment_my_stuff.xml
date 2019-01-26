@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.app.smeezy.fragment.MyStuffFragment">
+
+    <ImageView
+        android:id="@+id/img_stuff_add"
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/dimen_5dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:src="@drawable/add_green_icon"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_stuff_recycler_view"
+        android:layout_below="@id/img_stuff_add"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+
+    <com.app.smeezy.views.CustomFontTextView
+        android:id="@+id/tv_empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/no_stuff_added_yet"
+        android:visibility="gone"
+        app:typeface="Gentona_Light.otf" />
+
+    <com.app.smeezy.views.CustomFontTextView
+        android:id="@+id/tv_privacy_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/stuff_in_private_mode"
+        android:visibility="gone"
+        app:typeface="Gentona_Light.otf" />
+
+
+
+</RelativeLayout>

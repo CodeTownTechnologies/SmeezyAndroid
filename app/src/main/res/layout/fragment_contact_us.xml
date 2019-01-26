@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.app.smeezy.fragment.ContactUsFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginRight="@dimen/dimen_30dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.app.smeezy.views.CustomFontEdittext
+            android:id="@+id/et_contact_us_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_30dp"
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:background="@color/transparent"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/txt_15sp"
+            app:typeface="Gentona_Light.otf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/hint_color" />
+
+        <com.app.smeezy.views.CustomFontEdittext
+            android:id="@+id/et_contact_us_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_30dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:background="@color/transparent"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/txt_15sp"
+            app:typeface="Gentona_Light.otf" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1dp"
+            android:background="@color/hint_color" />
+
+        <com.app.smeezy.views.CustomFontEdittext
+            android:id="@+id/et_contact_us_subject"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_50dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:background="@drawable/edittext_box"
+            android:gravity="top"
+            android:hint="@string/subject"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/dimen_10dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/txt_15sp" />
+
+        <com.app.smeezy.views.CustomFontEdittext
+            android:id="@+id/et_contact_us_message"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_200dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:background="@drawable/edittext_box"
+            android:gravity="top"
+            android:hint="@string/write_message_here"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/dimen_10dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/txt_15sp" />
+
+
+        <com.app.smeezy.views.CustomFontButton
+            android:id="@+id/btn_contact_us_send"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginTop="@dimen/dimen_40dp"
+            android:background="@drawable/button_background"
+            android:text="@string/send"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_17sp"
+            app:typeface="Gentona_Medium.otf" />
+
+        <com.app.smeezy.views.CustomFontTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:gravity="center"
+            android:text="@string/or_you_can_mail_us_at"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/txt_15sp"
+            app:typeface="Gentona_Light.otf" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.app.smeezy.views.CustomFontTextView
+                android:id="@+id/tv_contact_us_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/hint_color"
+                android:textSize="@dimen/txt_15sp"
+                app:typeface="Gentona_Light.otf" />
+
+            <ImageView
+                android:id="@+id/img_contact_us_copy_email"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="@dimen/dimen_30dp"
+                android:layout_marginLeft="@dimen/dimen_10dp"
+                android:src="@drawable/copy" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+

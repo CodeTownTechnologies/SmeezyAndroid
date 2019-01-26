@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.app.smeezy.activity.ProfilePrivacyActivity">
+
+    <include layout="@layout/toolbar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="vertical">
+
+                <com.app.smeezy.views.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/email"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp"
+                    app:typeface="Gentona_Book.otf" />
+
+                <com.app.smeezy.views.CustomFontCheckBox
+                    android:id="@+id/cb_profile_privacy_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:text="@string/hide_email_from_profile"
+                    android:textColor="@color/black"
+                    app:typeface="Gentona_Light.otf" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:background="@drawable/devider_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="vertical">
+
+                <com.app.smeezy.views.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/phone_number"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp"
+                    app:typeface="Gentona_Book.otf" />
+
+                <com.app.smeezy.views.CustomFontCheckBox
+                    android:id="@+id/cb_profile_privacy_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:text="@string/hide_phone_number_from_profile"
+                    android:textColor="@color/black"
+                    app:typeface="Gentona_Light.otf" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:background="@drawable/devider_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="vertical">
+
+                <com.app.smeezy.views.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/dob"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp"
+                    app:typeface="Gentona_Book.otf" />
+
+                <com.app.smeezy.views.CustomFontCheckBox
+                    android:id="@+id/cb_profile_privacy_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:text="@string/hide_dob_from_profile"
+                    android:textColor="@color/black"
+                    app:typeface="Gentona_Light.otf" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:background="@drawable/devider_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="vertical">
+
+                <com.app.smeezy.views.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/relationship_status"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp"
+                    app:typeface="Gentona_Book.otf" />
+
+                <com.app.smeezy.views.CustomFontCheckBox
+                    android:id="@+id/cb_profile_privacy_relationship_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:text="@string/hide_relationship_status_from_profile"
+                    android:textColor="@color/black"
+                    app:typeface="Gentona_Light.otf" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:background="@drawable/devider_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="vertical">
+
+                <com.app.smeezy.views.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/location"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp"
+                    app:typeface="Gentona_Book.otf" />
+
+                <com.app.smeezy.views.CustomFontCheckBox
+                    android:id="@+id/cb_profile_privacy_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:text="@string/hide_location_from_profile"
+                    android:textColor="@color/black"
+                    app:typeface="Gentona_Light.otf" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:background="@drawable/devider_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/dimen_50dp"
+                android:orientation="vertical">
+
+                <com.app.smeezy.views.CustomFontTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/social_connection"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txt_15sp"
+                    app:typeface="Gentona_Book.otf" />
+
+                <com.app.smeezy.views.CustomFontCheckBox
+                    android:id="@+id/cb_profile_privacy_social_connection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimen_10dp"
+                    android:text="@string/hide_social_connection_from_profile"
+                    android:textColor="@color/black"
+                    app:typeface="Gentona_Light.otf" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1dp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:background="@drawable/devider_line" />
+
+
+            <com.app.smeezy.views.CustomFontButton
+                android:id="@+id/btn_profile_privacy_update"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dimen_40dp"
+                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:background="@drawable/button_background"
+                android:text="@string/update"
+                android:textColor="@color/white"
+                android:textSize="@dimen/txt_17sp"
+                app:typeface="Gentona_Medium.otf" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shapeborder"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_60dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/upload"
+                    android:textSize="@dimen/txt_12sp"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/popup_title_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0_5dp"
+                    android:background="@drawable/report_devider_line"/>
+
+                <TextView
+                    android:id="@+id/tv_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50dp"
+                    android:gravity="center"
+                    android:text="@string/camera"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/colorPrimary" />
+
+
+                <View
+                    android:id="@+id/view_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0_5dp"
+                    android:background="@drawable/report_devider_line"/>
+
+                <TextView
+                    android:id="@+id/tv_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_50dp"
+                    android:gravity="center"
+                    android:text="@string/gallery"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/colorPrimary" />
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0_5dp"
+                    android:background="@drawable/report_devider_line"/>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:background="@drawable/shapeborder"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textSize="@dimen/txt_17sp"
+                android:textColor="@color/colorPrimary" />
+
+
+        </LinearLayout>
+    </RelativeLayout>

@@ -1,0 +1,1073 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_profile_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.app.smeezy.fragment.ProfileFragment">
+
+    <!--  <LinearLayout
+          android:id="@+id/ll_profile_main"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical">-->
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="exitUntilCollapsed|scroll">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <!-- Profile Image  -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_profile_cover"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_200dp"
+                        android:scaleType="centerCrop" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_profile_cover"
+                        android:layout_width="@dimen/dimen_40dp"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:layout_alignTop="@+id/img_profile_cover"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dimen_80dp"
+                        android:visibility="visible" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_profile_user"
+                        android:layout_width="@dimen/dimen_80dp"
+                        android:layout_height="@dimen/dimen_80dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dimen_160dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_bar_profile_user"
+                        android:layout_width="@dimen/dimen_40dp"
+                        android:layout_height="@dimen/dimen_40dp"
+                        android:layout_alignTop="@+id/img_profile_user"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dimen_20dp" />
+
+                    <com.app.smeezy.views.CustomFontButton
+                        android:id="@+id/btn_profile_edit_cover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen_30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/dimen_170dp"
+                        android:background="@drawable/edit_btn" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_profile_edit_profile_image"
+                        android:layout_width="@dimen/dimen_25dp"
+                        android:layout_height="@dimen/dimen_25dp"
+                        android:layout_alignRight="@+id/img_profile_user"
+                        android:layout_marginTop="@dimen/dimen_170dp"
+                        android:src="@drawable/camera_icon" />
+
+                </RelativeLayout>
+                <!-- End Profile Image -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Profile Brief -->
+                    <com.app.smeezy.views.CustomFontTextView
+                        android:id="@+id/tv_profile_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_20sp"
+                        app:typeface="Gentona_Light.otf" />
+
+                    <com.app.smeezy.views.CustomFontTextView
+                        android:id="@+id/tv_profile_work_designation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dimen_2dp"
+                        android:textColor="@color/light_black"
+                        android:textSize="@dimen/txt_17sp"
+                        app:typeface="Gentona_Light.otf" />
+
+                    <com.app.smeezy.views.CustomFontTextView
+                        android:id="@+id/tv_profile_user_city_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dimen_2dp"
+                        android:textColor="@color/hint_color"
+                        android:textSize="@dimen/txt_15sp"
+                        app:typeface="Gentona_Light.otf" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <com.app.smeezy.views.CustomFontButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_30dp"
+                            android:layout_marginRight="@dimen/dimen_20dp"
+                            android:background="@color/colorPrimary"
+                            android:drawableLeft="@drawable/addfriend_icon"
+                            android:drawablePadding="@dimen/dimen_5dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/dimen_10dp"
+                            android:paddingRight="@dimen/dimen_10dp"
+                            android:text="@string/add_friend"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_15sp"
+                            app:typeface="Gentona_Light.otf" />
+
+                        <com.app.smeezy.views.CustomFontButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen_30dp"
+                            android:background="@color/colorPrimary"
+                            android:drawableLeft="@drawable/email_icon_login"
+                            android:drawablePadding="@dimen/dimen_5dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/dimen_10dp"
+                            android:paddingRight="@dimen/dimen_10dp"
+                            android:text="@string/message"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/txt_15sp"
+                            app:typeface="Gentona_Light.otf" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:background="@drawable/devider_line" />
+
+                    <!-- End Profile Brief -->
+
+                    <!-- About Us -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:layout_marginRight="@dimen/dimen_10dp"
+                        android:orientation="horizontal">
+
+                        <com.app.smeezy.views.CustomFontTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:layout_weight="1"
+                            android:text="@string/about_me"
+                            android:textColor="@color/light_black"
+                            android:textSize="@dimen/txt_17sp"
+                            app:typeface="Gentona_Book.otf" />
+
+                        <ImageView
+                            android:id="@+id/img_profile_edit_about_me"
+                            android:layout_width="@dimen/dimen_25dp"
+                            android:layout_height="@dimen/dimen_25dp"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:src="@drawable/edit_icon" />
+
+                        <ImageView
+                            android:id="@+id/img_profile_cross_about_me"
+                            android:layout_width="@dimen/dimen_25dp"
+                            android:layout_height="@dimen/dimen_25dp"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:src="@drawable/cross_black"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/img_profile_correct_about_me"
+                            android:layout_width="@dimen/dimen_25dp"
+                            android:layout_height="@dimen/dimen_25dp"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:src="@drawable/correct"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <com.app.smeezy.views.CustomFontTextView
+                        android:id="@+id/tv_profile_about_me_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/hint_color"
+                        android:textSize="@dimen/txt_15sp"
+                        app:typeface="Gentona_Light.otf" />
+
+                    <com.app.smeezy.views.CustomFontEdittext
+                        android:id="@+id/et_profile_about_me_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:background="@color/transparent"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txt_15sp"
+                        android:visibility="gone"
+                        app:typeface="Gentona_Light.otf" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:background="@drawable/devider_line" />
+
+                    <!-- End About Us-->
+
+
+                    <!--<com.app.smeezy.views.CustomFontTextView
+                        android:id="@+id/tv_profile_my_interest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dimen_20dp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:text="@string/my_wishlist"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/txt_17sp"
+                        app:typeface="Gentona_Book.otf" />
+
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen_1dp"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:background="@drawable/devider_line" />-->
+
+
+                    <ImageView
+                        android:id="@+id/img_profile_collapse"
+                        android:layout_width="@dimen/dimen_25dp"
+                        android:layout_height="@dimen/dimen_25dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dimen_20dp"
+                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:src="@drawable/expand_arrow" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_profile_extra"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <!-- Profile Details -->
+                        <LinearLayout
+                            android:id="@+id/ll_profile_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:orientation="horizontal">
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/email_icon"
+                                android:drawablePadding="@dimen/dimen_10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/email"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_15sp"
+                                app:typeface="Gentona_Book.otf" />
+
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:drawablePadding="@dimen/dimen_10dp"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_profile_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:orientation="horizontal">
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/call_icon"
+                                android:drawablePadding="@dimen/dimen_10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/phone_number"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_15sp"
+                                app:typeface="Gentona_Book.otf" />
+
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:drawablePadding="@dimen/dimen_10dp"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_profile_dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:orientation="horizontal">
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/birthday_icon"
+                                android:drawablePadding="@dimen/dimen_10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/dob"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_15sp"
+                                app:typeface="Gentona_Book.otf" />
+
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_dob"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:drawablePadding="@dimen/dimen_10dp"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_profile_relationship_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:orientation="horizontal">
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/relationship_icon"
+                                android:drawablePadding="@dimen/dimen_10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/relationship_status"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_15sp"
+                                app:typeface="Gentona_Book.otf" />
+
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_relationship_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:drawablePadding="@dimen/dimen_10dp"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_profile_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:orientation="horizontal">
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/gender_icon"
+                                android:drawablePadding="@dimen/dimen_10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/gender"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_15sp"
+                                app:typeface="Gentona_Book.otf" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_gender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:drawablePadding="@dimen/dimen_10dp"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_15sp"
+                                android:textStyle="bold" />
+
+                            <!--  <LinearLayout
+                                  android:layout_width="0dp"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginLeft="@dimen/dimen_10dp"
+                                  android:layout_weight="2"
+                                  android:orientation="vertical">
+
+                                  <RadioGroup
+                                      android:id="@+id/rg_profile_gender"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:orientation="horizontal">
+
+
+                                      <RadioButton
+                                          android:id="@+id/rb_profile_male"
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:layout_marginLeft="@dimen/dimen_20dp"
+                                          android:button="@drawable/selector_radio_blue"
+                                          android:enabled="false"
+                                          android:paddingLeft="@dimen/dimen_5dp"
+                                          android:text="@string/male"
+                                          android:textColor="@color/black"
+                                          android:textSize="@dimen/txt_15sp"
+                                          android:textStyle="bold" />
+
+                                      <RadioButton
+                                          android:id="@+id/rb_profile_female"
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:layout_marginLeft="@dimen/dimen_20dp"
+                                          android:button="@drawable/selector_radio_blue"
+                                          android:enabled="false"
+                                          android:paddingLeft="@dimen/dimen_5dp"
+                                          android:text="@string/female"
+                                          android:textColor="@color/black"
+                                          android:textSize="@dimen/txt_15sp"
+                                          android:textStyle="bold" />
+
+                                      <RadioButton
+                                          android:id="@+id/rb_profile_other"
+                                          android:layout_width="wrap_content"
+                                          android:layout_height="wrap_content"
+                                          android:layout_marginLeft="@dimen/dimen_20dp"
+                                          android:button="@drawable/selector_radio_blue"
+                                          android:enabled="false"
+                                          android:paddingLeft="@dimen/dimen_5dp"
+                                          android:text="@string/other"
+                                          android:textColor="@color/black"
+                                          android:textSize="@dimen/txt_15sp"
+                                          android:textStyle="bold" />
+
+                                  </RadioGroup>
+
+                                  <com.app.smeezy.views.CustomFontTextView
+                                      android:id="@+id/tv_profile_gender"
+                                      android:layout_width="wrap_content"
+                                      android:layout_height="@dimen/dimen_30dp"
+                                      android:layout_gravity="center"
+                                      android:layout_marginTop="@dimen/dimen_5dp"
+                                      android:background="@drawable/edittext_box"
+                                      android:gravity="center"
+                                      android:hint="@string/gender"
+                                      android:paddingLeft="@dimen/dimen_5dp"
+                                      android:paddingRight="@dimen/dimen_5dp"
+                                      android:textColor="@color/black"
+                                      android:textSize="@dimen/txt_15sp"
+                                      android:visibility="gone"
+                                      app:typeface="Gentona_Light.otf" />
+
+
+                              </LinearLayout>-->
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_profile_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_10dp"
+                            android:layout_marginRight="@dimen/dimen_10dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:orientation="horizontal">
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/location_icon"
+                                android:drawablePadding="@dimen/dimen_10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/location"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_15sp"
+                                app:typeface="Gentona_Book.otf" />
+
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_location_address"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:drawablePadding="@dimen/dimen_10dp"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+
+                        <com.app.smeezy.views.CustomFontTextView
+                            android:id="@+id/tv_profile_edit_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_40dp"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:text="@string/edit_details"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/txt_17sp"
+                            app:typeface="Gentona_Book.otf" />
+
+                        <!-- End Profile Details -->
+
+                        <!-- Social Connection -->
+                        <com.app.smeezy.views.CustomFontTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_40dp"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:background="@color/profile_tab_background"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/dimen_20dp"
+                            android:text="@string/social_connection"
+                            android:textColor="@color/light_black"
+                            android:textSize="@dimen/txt_17sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dimen_10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/facebook_icon" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="@dimen/dimen_80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:text="@string/facebook"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_17sp"
+                                app:typeface="Gentona_Book.otf" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_fb_url"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/hint_color"
+                                android:textSize="@dimen/txt_13sp"
+                                app:typeface="Gentona_Light.otf" />
+
+                            <com.app.smeezy.views.CustomFontEdittext
+                                android:id="@+id/et_profile_fb_url"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:inputType="textMultiLine"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/txt_15sp"
+                                android:visibility="gone"
+                                app:typeface="Gentona_Light.otf" />
+
+                            <ImageView
+                                android:id="@+id/img_profile_edit_fb_url"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/edit_icon" />
+
+                            <ImageView
+                                android:id="@+id/img_profile_cross_fb_url"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/cross_black"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/img_profile_correct_fb_url"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/correct"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_1dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:background="@drawable/devider_line" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dimen_10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/twitter_icon" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="@dimen/dimen_80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:text="@string/twitter"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_17sp"
+                                app:typeface="Gentona_Book.otf" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_twitter_url"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/hint_color"
+                                android:textSize="@dimen/txt_13sp"
+                                app:typeface="Gentona_Light.otf" />
+
+                            <com.app.smeezy.views.CustomFontEdittext
+                                android:id="@+id/et_profile_twitter_url"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:inputType="textMultiLine"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/txt_15sp"
+                                android:visibility="gone"
+                                app:typeface="Gentona_Light.otf" />
+
+                            <ImageView
+                                android:id="@+id/img_profile_edit_twitter_url"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/edit_icon" />
+
+                            <ImageView
+                                android:id="@+id/img_profile_cross_twitter_url"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/cross_black"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/img_profile_correct_twitter_url"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/correct"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_1dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:background="@drawable/devider_line" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dimen_10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/linkdin_icon" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="@dimen/dimen_80dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:text="@string/linkedin"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_17sp"
+                                app:typeface="Gentona_Book.otf" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_linkedin_url"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/hint_color"
+                                android:textSize="@dimen/txt_13sp"
+                                app:typeface="Gentona_Light.otf" />
+
+                            <com.app.smeezy.views.CustomFontEdittext
+                                android:id="@+id/et_profile_linkedin_url"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:layout_weight="1"
+                                android:background="@color/transparent"
+                                android:inputType="textMultiLine"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/txt_15sp"
+                                android:visibility="gone"
+                                app:typeface="Gentona_Light.otf" />
+
+                            <ImageView
+                                android:id="@+id/img_profile_edit_linkedin_url"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/edit_icon" />
+
+                            <ImageView
+                                android:id="@+id/img_profile_cross_linkedin_url"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/cross_black"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/img_profile_correct_linkedin_url"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/correct"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+                        <!-- End Social Connection -->
+
+                        <!-- Other Setting -->
+                        <com.app.smeezy.views.CustomFontTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_40dp"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:background="@color/profile_tab_background"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/dimen_20dp"
+                            android:text="@string/other_setting"
+                            android:textColor="@color/light_black"
+                            android:textSize="@dimen/txt_17sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dimen_10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/religious_icon" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="@dimen/dimen_120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:text="@string/religious_views"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_17sp"
+                                app:typeface="Gentona_Book.otf" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_religious_views"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/hint_color"
+                                android:textSize="@dimen/txt_13sp"
+                                app:typeface="Gentona_Light.otf" />
+
+                            <!--<ImageView
+                                android:id="@+id/img_profile_edit_religious_views"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/edit_icon" />-->
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_1dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:background="@drawable/devider_line" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dimen_10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/bjp_icon" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="@dimen/dimen_120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:text="@string/political_views"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_17sp"
+                                app:typeface="Gentona_Book.otf" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_political_views"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/hint_color"
+                                android:textSize="@dimen/txt_13sp"
+                                app:typeface="Gentona_Light.otf" />
+
+                            <!--<ImageView
+                                android:id="@+id/img_profile_edit_political_views"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/edit_icon" />-->
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_1dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:background="@drawable/devider_line" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dimen_10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/work_icon" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="@dimen/dimen_120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:text="@string/work"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_17sp"
+                                app:typeface="Gentona_Book.otf" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_work"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/hint_color"
+                                android:textSize="@dimen/txt_13sp"
+                                app:typeface="Gentona_Light.otf" />
+
+                            <!--<ImageView
+                                android:id="@+id/img_profile_edit_work"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/edit_icon" />-->
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen_1dp"
+                            android:layout_marginTop="@dimen/dimen_5dp"
+                            android:background="@drawable/devider_line" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dimen_10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/school_icon" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:layout_width="@dimen/dimen_120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:text="@string/school"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/txt_17sp"
+                                app:typeface="Gentona_Book.otf" />
+
+                            <com.app.smeezy.views.CustomFontTextView
+                                android:id="@+id/tv_profile_school"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dimen_20dp"
+                                android:layout_weight="1"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textColor="@color/hint_color"
+                                android:textSize="@dimen/txt_13sp"
+                                app:typeface="Gentona_Light.otf" />
+
+                            <!--<ImageView
+                                android:id="@+id/img_profile_edit_school"
+                                android:layout_width="@dimen/dimen_25dp"
+                                android:layout_height="@dimen/dimen_25dp"
+                                android:layout_marginLeft="@dimen/dimen_10dp"
+                                android:src="@drawable/edit_icon" />-->
+
+
+                        </LinearLayout>
+
+                        <com.app.smeezy.views.CustomFontTextView
+                            android:id="@+id/tv_profile_edit_other_settings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dimen_10dp"
+                            android:layout_marginLeft="@dimen/dimen_40dp"
+                            android:layout_marginTop="@dimen/dimen_10dp"
+                            android:text="@string/edit_other_settings"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/txt_17sp"
+                            app:typeface="Gentona_Book.otf" />
+                        <!-- End Other Setting -->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabBackground="@color/profile_tab_background"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabMode="scrollable"
+            app:tabTextAppearance="@style/tablayoutText" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_profile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--</LinearLayout>-->
+
+</android.support.design.widget.CoordinatorLayout>

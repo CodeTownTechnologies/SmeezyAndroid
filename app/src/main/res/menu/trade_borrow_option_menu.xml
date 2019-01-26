@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/unfollow_user"
+        android:icon="@drawable/unfollow_user"
+        android:title="@string/unfollow_user" />
+
+
+    <item
+        android:id="@+id/change_category"
+        android:icon="@drawable/change_category"
+        android:title="@string/change_category" />
+
+    <item
+        android:id="@+id/bookmark"
+        android:icon="@drawable/bookmark_icon"
+        android:title="@string/bookmark_item" />
+
+    <item
+        android:id="@+id/remove_bookmark"
+        android:icon="@drawable/remove_bookmarrk"
+        android:title="@string/remove_bookmark"/>
+
+    <item
+        android:id="@+id/report_post"
+        android:icon="@drawable/report_flag"
+        android:title="@string/report_post" />
+
+
+</menu>
