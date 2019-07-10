@@ -39,6 +39,30 @@
           }
         },
         {
+          "client_id": "1073031039714-33uiq17bk5bhh7tuc3s73i1amd98sgp1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.smeezy",
+            "certificate_hash": "29252b41d27b53a4ccc16a890657ec8180f70807"
+          }
+        },
+        {
+          "client_id": "1073031039714-i7o5816ul35g06tjqqm69unrth2o0lng.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.smeezy",
+            "certificate_hash": "83ce77520124ea0e3936c467c745f984346a99c6"
+          }
+        },
+        {
+          "client_id": "1073031039714-b588s0nln4sdclice27kbvr0cugm63nf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.smeezy",
+            "certificate_hash": "d35fcae207fa84900519cd0d00a455214c2ea6c7"
+          }
+        },
+        {
           "client_id": "1073031039714-idv8mkm3sbtne0fh5ihuorqrhgtm70p6.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -56,8 +80,15 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "1073031039714-t91rm37mjvlhnj119164o6e5b3t67t0f.apps.googleusercontent.com",
+              "client_id": "1073031039714-od1gmfmgp7f5oiq3f8djtept9fb625d6.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1073031039714-cnj33fodmtuubej1k8r1393a2t0dml9p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.manan"
+              }
             }
           ]
         },

@@ -55,8 +55,8 @@ public class StaticData {
 
     /* APIs */
     /** Development Environment **/
-    public static final String BASE_URL = "https://demo.smeezy.com/api/";
-    //public static final String BASE_URL = "https://www.smeezy.com/api/";
+    //public static final String BASE_URL = "https://demo.smeezy.com/api/";
+    public static final String BASE_URL = "https://www.smeezy.com/api/";
     public static final String TERMS_URL = "https://www.smeezy.com/page/terms-and-condition/app";
     public static final String PRIVACY_POLICY_URL = "https://www.smeezy.com/page/privacy-policy/app";
     public static final String ABOUT_US_URL = "https://www.smeezy.com/page/about-us/app";
